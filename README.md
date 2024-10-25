@@ -12,10 +12,16 @@ This is intented to be a jekyll-like site, but built with [hexo.io](https://hexo
 git clone git@github.com:qlrd/why-satoshi-did-this-way.git
 ```
 
+## Install hexo
+
+```bash
+npm install -g hexo
+```
+
 ## Install dependencies
 
 ```bash
-npm install
+yarn install
 ```
 
 ## Create a post
