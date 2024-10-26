@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Why double hash | Why satoshi did this way</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Why do we need double hashing when calculating the checksum?  The short answer: “Because Satoshi did this way”.  The long Peter Wuille answer:    (…) presumably because of (likely misguided) concern a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Why double hash">
+<meta property="og:url" content="https://qlrd.github.io/why-satoshi-did-this-way/2024/10/25/Why-double-hash/index.html">
+<meta property="og:site_name" content="Why satoshi did this way">
+<meta property="og:description" content="Why do we need double hashing when calculating the checksum?  The short answer: “Because Satoshi did this way”.  The long Peter Wuille answer:    (…) presumably because of (likely misguided) concern a">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2024-10-25T12:23:29.000Z">
+<meta property="article:modified_time" content="2024-10-26T19:02:17.937Z">
+<meta property="article:tag" content="SHA256">
+<meta property="article:tag" content="RIPEMD160">
+<meta property="article:tag" content="P2PKH">
+<meta property="article:tag" content="transaction">
+<meta property="article:tag" content="ECDSA">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/why-satoshi-did-this-way/atom.xml" title="Why satoshi did this way" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/why-satoshi-did-this-way/favicon.png">
+  
+  
+  
+<link rel="stylesheet" href="/why-satoshi-did-this-way/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/why-satoshi-did-this-way/fancybox/jquery.fancybox.min.css">
+
+  
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/why-satoshi-did-this-way/" id="logo">Why satoshi did this way</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/why-satoshi-did-this-way/" id="subtitle">because satoshi did this way</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"><span class="fa fa-bars"></span></a>
+        
+          <a class="main-nav-link" href="/why-satoshi-did-this-way/">Home</a>
+        
+          <a class="main-nav-link" href="/why-satoshi-did-this-way/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+        
+          <a class="nav-icon" href="/why-satoshi-did-this-way/atom.xml" title="RSS Feed"><span class="fa fa-rss"></span></a>
+        
+        <a class="nav-icon nav-search-btn" title="Search"><span class="fa fa-search"></span></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://qlrd.github.io/why-satoshi-did-this-way"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-Why-double-hash" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/why-satoshi-did-this-way/2024/10/25/Why-double-hash/" class="article-date">
+  <time class="dt-published" datetime="2024-10-25T12:23:29.000Z" itemprop="datePublished">2024-10-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      Why double hash
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p><a target="_blank" rel="noopener" href="https://bitcoin.stackexchange.com/questions/110065/checksum-sha256sha256prefixdata-why-double-hashing"><code>Why do we need double hashing when calculating the checksum?</code></a></p>
+<ul>
+<li><p>The short answer: “Because Satoshi did this way”.</p>
+</li>
+<li><p>The long <a target="_blank" rel="noopener" href="https://bitcoin.stackexchange.com/users/208/pieter-wuille">Peter Wuille</a> answer:</p>
+</li>
+</ul>
+<blockquote>
+<p>(…) presumably because of (likely misguided) concern about certain attacks (like length extension attacks, which only apply when hashing secret data), and then used those everywhere (…) To the best of my knowledge, none of these use cases actually benefit at all from double hashing.</p>
+</blockquote>
+<p>See the complete answer <a target="_blank" rel="noopener" href="https://bitcoin.stackexchange.com/questions/110065/checksum-sha256sha256prefixdata-why-double-hashing#answer-110142">here</a></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://qlrd.github.io/why-satoshi-did-this-way/2024/10/25/Why-double-hash/" data-id="cm2qjqfo400004ecmgtff54hb" data-title="Why double hash" class="article-share-link"><span class="fa fa-share">Share</span></a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/why-satoshi-did-this-way/tags/ECDSA/" rel="tag">ECDSA</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/why-satoshi-did-this-way/tags/P2PKH/" rel="tag">P2PKH</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/why-satoshi-did-this-way/tags/RIPEMD160/" rel="tag">RIPEMD160</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/why-satoshi-did-this-way/tags/SHA256/" rel="tag">SHA256</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/why-satoshi-did-this-way/tags/transaction/" rel="tag">transaction</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/why-satoshi-did-this-way/tags/ECDSA/" rel="tag">ECDSA</a></li><li class="tag-list-item"><a class="tag-list-link" href="/why-satoshi-did-this-way/tags/P2PKH/" rel="tag">P2PKH</a></li><li class="tag-list-item"><a class="tag-list-link" href="/why-satoshi-did-this-way/tags/RIPEMD160/" rel="tag">RIPEMD160</a></li><li class="tag-list-item"><a class="tag-list-link" href="/why-satoshi-did-this-way/tags/SHA256/" rel="tag">SHA256</a></li><li class="tag-list-item"><a class="tag-list-link" href="/why-satoshi-did-this-way/tags/transaction/" rel="tag">transaction</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/why-satoshi-did-this-way/tags/ECDSA/" style="font-size: 10px;">ECDSA</a> <a href="/why-satoshi-did-this-way/tags/P2PKH/" style="font-size: 10px;">P2PKH</a> <a href="/why-satoshi-did-this-way/tags/RIPEMD160/" style="font-size: 10px;">RIPEMD160</a> <a href="/why-satoshi-did-this-way/tags/SHA256/" style="font-size: 10px;">SHA256</a> <a href="/why-satoshi-did-this-way/tags/transaction/" style="font-size: 10px;">transaction</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/why-satoshi-did-this-way/archives/2024/10/">October 2024</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/why-satoshi-did-this-way/2024/10/25/Why-double-hash/">Why double hash</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2024 Why satoshi did this way<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/why-satoshi-did-this-way/" class="mobile-nav-link">Home</a>
+  
+    <a href="/why-satoshi-did-this-way/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/why-satoshi-did-this-way/js/jquery-3.6.4.min.js"></script>
+
+
+
+  
+<script src="/why-satoshi-did-this-way/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/why-satoshi-did-this-way/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
